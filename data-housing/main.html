@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Test : Housing</title>
+<script type="module">
+	
+	import { range } from '../system/extras/range.js'
+	import { generate_combinations } from '../system/extras/combos.js'
+	import { make_training_entries } from './main.js'
+	import { make_testing_entries } from './main.js'
+	import { entries_to_data } from './main.js'
+	import { scale_down, scale_up } from './main.js'
+	import { calculate } from './main.js'
+	
+	function run() {
+		
+		let scale
+		scenario_train_start()
+		scenario_test_input()
+		scenario_test_output()
+		scenario_validate()
+		
+		function scenario_train_start() {
+			
+			const entries = make_training_entries()
+			let { inputs, outputs, scales } = entries_to_data(entries)
+			scale = scales[3]
+		}
+		
+		function scenario_test_input() {
+			
+			const entries = make_testing_entries()
+			let { inputs, outputs, scales } = entries_to_data(entries)
+		}
+		
+		function scenario_test_output() {
+			log(`scale up: ${scale.up(0.14285714285714285)}`)
+		}
+		
+		function scenario_validate() {
+			
+			const entries = make_training_entries()
+			let { inputs, outputs, scales } = entries_to_data(entries)
+			log(`inputs down: ${inputs}`)
+			log(`outputs down: ${outputs}`)
+			
+			inputs = scale_up(inputs, scales)
+			outputs = scale_up(outputs, scales.slice(3))
+			log(`inputs up: ${inputs}`)
+			log(`outputs up: ${outputs}`)
+		}
+		
+		function log(message) {
+			if (false) console.log(message)
+		}
+	}
+	
+	run()
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+.display {
+	padding-top:20px;
+	clip-path: border-box;
+}
+
+progress {
+	margin-bottom:-19px;
+	margin-left:0px;
+	margin-right:0px;
+	width:100%;
+	color:green;
+	background-color:hsl(255, 0%, 0% / 0 );
+	--pico-progress-background-color:rgba(0,0,0,0);
+	--pico-progress-color:green;
+}
+
+progress::-webkit-progress-bar {
+	background-color:hsl(255, 0%, 0% / 0 );
+}
+
+.controls {
+	margin-bottom:-14px;
+	padding-top:10px;
+	padding-bottom:0px;
+	padding-left:10px;
+	font-size:1em;
+}
+
+.controls button {
+	padding:4px 10px 4px 10px;
+	margin-right:10px;
+	background:hsl(225, 73%, 96%);
+}

@@ -1,0 +1,65 @@
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background:hsl(217, 27%, 86%);
+}
+
+main {
+	margin:50px;
+	padding:0;
+}
+
+* > * {
+	box-sizing: border-box;
+}
+
+.display {
+	margin-top:0px;
+	padding:5px;
+	background:white;
+	border:1px solid grey;
+	border-radius: 20px;
+}
+
+#files {
+	padding-bottom:20px;
+}
+
+.file-label {
+	padding-top:0px;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-top:30px;
+}
+
+.file-name {
+	font-family:'sans';
+	margin-right:20px;
+	font-size:120%;
+	font-weight:900;
+	line-height:1em;
+	color:hsl(217, 27%, 35%);
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.path-name {
+	font-family:'sans';
+	font-size:100%;
+	font-weight:900;
+	line-height:1em;
+	color:hsl(217, 27%, 50%);
+	text-align: right;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.shj-lang-js > * {
+	font-size:0.8em;
+	line-height:1.4em;
+	padding-left:20px;
+	padding-right:20px;
+	tab-size: 2em;
+}

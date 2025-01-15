@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Example : Digits</title>
+<link rel="stylesheet" type="text/css" href="../example-shared/main.css"/>
+<link rel="stylesheet" href="../library/speed-highlight/themes/default.css">
+<link rel="stylesheet" href="../library/speed-highlight/themes/github-dim.css">
+<script src="../library/d3.umd.js"></script>
+<script src="../library/plot.umd.js"></script>
+<script type="module">
+	
+	import { Bus } from '../system/extras/bus.js'
+	import { core } from './core-batchless.js'
+	import { ui } from './ui.js'
+	import { plot } from './plot.js'
+	
+	const bus = Bus()
+	core(bus)
+	ui(bus)
+	plot(bus)
+	
+	bus.on('ready', () => bus.emit('training-start-requested'))
+	
+</script>
+</head>
+<body>
+<div class="grid-container">
+	<div id="digits" class="grid-item"></div>
+	<div id="loss" class="grid-item"></div>
+</div>
+</body>
+</html>
