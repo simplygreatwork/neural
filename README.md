@@ -3,6 +3,7 @@
 - I started working with Andy Pai's implementation of micrograd: [neuroflow.js](https://github.com/abpai/neuroflow-js)
 - It was easy to get started with as a viable frame of reference for working with micrograd in Javascript.
 - I made some changes and enhancements to focus on clarity and I'm hacking out some new examples here.
+- These examples are not all yet highly accurate.
 
 # Examples
 - [Graphing](https://simplygreatwork.github.io/neural/example-graph/)
